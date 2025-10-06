@@ -25,7 +25,7 @@ while sel != "4":
         print('''Listar de:
 [1] - Tienda 1
 [2] - Tienda 2
-[3] - Tienda 3\n''')
+[3] - Tienda 3''')
         sel = -1
         while sel != 1 and sel != 2 and sel != 3:
             sel = inputInt()
@@ -40,5 +40,4 @@ Tienda {i+1} | producto mas barato - {productos[productoBarato]} ({precios[produ
         for i in range(len(precios)):
             avgPrices[i] = avgList(precios[i]) # type: ignore
         display = paraListsSort(productos, avgPrices)
-        for i in range(len(productos)):
-            mostrarListasParalelas(display[0], display[1])
+        mostrarListasParalelas(display[0], display[1])

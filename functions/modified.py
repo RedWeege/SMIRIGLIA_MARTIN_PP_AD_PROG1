@@ -6,7 +6,6 @@ def mostrarListasParalelas(producto:list, precio:list):
     '''
     for i in range(len(producto)):
         print(f"{producto[i]} - {precio[i]}$")
-
 def mostrarListaParalelasIndice(producto:list, precio:list, sel:int):
     '''
     Printea los valores de una lista de manera ordenada
@@ -15,7 +14,6 @@ def mostrarListaParalelasIndice(producto:list, precio:list, sel:int):
     '''
     for i in range(len(producto)):
         print(f"{producto[i]} - {precio[i][sel]}$")
-
 def paraListsSort(lista:list, listaNum:list, sort:str = "mM"):
     '''
     Funcion de ordenamiento de listas,
@@ -24,8 +22,11 @@ def paraListsSort(lista:list, listaNum:list, sort:str = "mM"):
     si no es especificado o el 3er es invalido, ordena de mayor a menor
     modificada para ordenar listas paralelas sin modificar las listas originales
     '''
-    listaImportada = lista
-    listaNumImportada = listaNum
+    listaImportada = [""] * len(lista)
+    listaNumImportada = [""] * len(lista)
+    for i in range(len(lista)):
+        listaImportada[i] = lista[i]
+        listaNumImportada[i] = listaNum[i]
     if sort == "mM":
         for i in range(len(listaNumImportada)-1):
             for j in range(i+1, len(listaNumImportada)):

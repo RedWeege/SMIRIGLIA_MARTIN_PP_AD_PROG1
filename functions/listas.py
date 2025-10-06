@@ -4,7 +4,6 @@ def mostrarLista(lista:list):
     '''
     for i in range(len(lista)):
         print(lista[i])
-
 def listsSort(lista:list, sort:str = "mM"):
     '''
     Funcion de ordenamiento de listas,
